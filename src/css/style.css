@@ -268,14 +268,73 @@
 }
 
 .card {
+  position: relative;
   max-width: 270px;
+  background-color: white;
+  transition: 0.5s;
 }
 .card__photo {
+  position: relative;
   padding: 10px 22px;
   border: 1px solid #e5e5e5;
 }
-.card__photo img {
+.card__photo .new {
+  color: #333;
+  left: 20px;
+  width: 47px;
+  height: 26px;
+  background-color: #ffffff;
+}
+.card__photo .sale {
+  color: #fff;
+  left: 20px;
+  top: 40px;
+  width: 47px;
+  height: 26px;
+  background-color: #58bdab;
+}
+.card__photo .discount {
+  color: #ffffff;
+  right: 5px;
+  border-radius: 50%;
+  width: 41px;
+  height: 41px;
+  background-color: #58bdab;
+}
+.card__photo span {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.card__photo .mainphoto {
   width: 100%;
+}
+.card__photo .mainphoto img {
+  width: 100%;
+}
+.card__photo .subphoto {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  width: 260px;
+  height: 100px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(55, 64, 70, 0.9);
+}
+.card__photo .subphoto img {
+  width: 56px;
+  height: 81px;
 }
 .card__name {
   color: #888888;
@@ -308,7 +367,51 @@
   letter-spacing: normal;
   text-align: center;
   margin-top: 16px;
+  margin-bottom: 20px;
+}
+.card__cart {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 204px;
+  height: 65px;
+  color: #ffffff;
+  font-family: Ubuntu;
+  background-color: #58bdab;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 23px;
+}
+.card__other {
+  color: #888888;
+  height: 17px;
+  display: none;
+  justify-content: center;
+  gap: 30px;
+}
+.card__other div:hover {
+  color: #58bdab;
 }
 .card:hover {
-  zoom: 110%;
+  transition: 0.5s;
+  z-index: 10;
+  transform: scale(1.25);
+  border: 1px solid #e5e5e5;
+}
+.card:hover .card__photo {
+  border: none;
+}
+.card:hover .card__photo span {
+  display: flex;
+}
+.card:hover .card__photo .subphoto {
+  display: flex;
+}
+.card:hover .card__cart {
+  display: flex;
+}
+.card:hover .card__other {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

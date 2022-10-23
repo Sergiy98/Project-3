@@ -283,12 +283,72 @@
 }
 
 .card {
+    position: relative;
     max-width: 270px;
+    background-color: white;
+    transition: 0.5s;
     &__photo {
+        position: relative;
         padding: 10px 22px;
         border: 1px solid #e5e5e5;
-        img {
+        .new {
+            color: #333;
+            left: 20px;
+            width: 47px;
+            height: 26px;
+            background-color: #ffffff;
+        }
+        .sale {
+            color: #fff;
+            left: 20px;
+            top: 40px;
+            width: 47px;
+            height: 26px;
+            background-color: #58bdab;
+        }
+        .discount {
+            color: #ffffff;
+            right: 5px;
+            border-radius: 50%;
+            width: 41px;
+            height: 41px;
+            background-color: #58bdab;
+        }
+        span {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            font-family: Ubuntu;
+            font-size: 13px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .mainphoto {
             width: 100%;
+            img {
+                width: 100%;
+                
+            }
+        }
+        .subphoto {
+            position: absolute;
+            bottom: 10px;
+            left: 5px;
+            width: 260px;
+            height: 100px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(55, 64, 70, 0.9);
+            img {
+                width: 56px;
+                height: 81px;
+            }
         }
     }
     &__name {
@@ -322,11 +382,58 @@
         letter-spacing: normal;
         text-align: center;
         margin-top: 16px;
+        margin-bottom: 20px;
+    }
+    &__cart {   
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 204px;
+        height: 65px;
+        color: #ffffff;
+        font-family: Ubuntu;
+        background-color: #58bdab;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 auto;
+        margin-bottom: 23px;
+    }
+    &__other {
+        color: #888888;
+        height: 17px;
+        display: none;
+        justify-content: center;
+        gap: 30px;
+        div {
+            &:hover {
+                color: #58bdab;
+            }
+        }
     }
     &:hover {
-        zoom: 110%;
-        .card__photo {
-            
+        transition: 0.5s;
+        .card {
+            &__photo {
+                border: none;
+            span {
+                display: flex;
+            }
+            .subphoto {
+                display: flex;
+            }
+            }
+            &__cart {
+                display: flex;
+            }
+            &__other {
+                display: flex;
+            }
         }
+        z-index: 10;
+        transform: scale(1.25);
+        border: 1px solid #e5e5e5;
+        
+
     }
 }
