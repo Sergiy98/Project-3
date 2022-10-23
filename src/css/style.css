@@ -1,0 +1,314 @@
+.conteiner {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.leftpanel {
+  position: fixed;
+  height: 100vh;
+  background-color: #bababa;
+}
+.leftpanel a {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+.leftpanel a img {
+  width: 80px;
+}
+
+.rightpanel {
+  position: fixed;
+  width: 100px;
+  height: 100%;
+  background-color: #bababa;
+  right: 0;
+}
+.rightpanel a {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+.rightpanel a::after {
+  content: "0";
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 50%;
+  background-color: #e9e9e9;
+}
+
+.nav {
+  height: 100px;
+  background-color: #58bdab;
+}
+.nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav ul li {
+  position: relative;
+  height: 100%;
+}
+.nav ul li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #374046;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  padding: 0 25px;
+  text-decoration: none;
+}
+.nav ul li a:hover {
+  color: #e9e9e9;
+}
+.nav ul li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0px;
+  height: 7px;
+  background: rgb(255, 255, 255);
+  transition: all 0.45s;
+}
+.nav ul li:hover::after {
+  width: 100%;
+}
+
+.slider {
+  margin: 10px 110px;
+}
+.slider__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/slider.jpg) center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 943px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.slider__main .title {
+  color: #333333;
+  font-family: Ubuntu;
+  font-size: 115px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.slider__main .subtitle {
+  color: #2b414e;
+  font-family: Ubuntu;
+  font-size: 36px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.slider__other {
+  min-height: 350px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.slider__other .children {
+  background: url("../img/slider_1.jpg");
+}
+.slider__other .education {
+  background: url("../img/slider_2.jpg");
+}
+.slider__other .business {
+  background: url("../img/slider_3.jpg");
+}
+.slider__other .post {
+  width: 100%;
+  background: cover;
+  color: #2b414e;
+  font-family: Ubuntu;
+  font-size: 35px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+.slider__other .post:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 4%;
+}
+.slider__other .publishing {
+  color: #2b414e;
+  font-family: Ubuntu;
+  font-size: 13px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.books .conteiner {
+  position: relative;
+}
+.books__menu {
+  position: relative;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(60, 60, 60, 0.1);
+}
+.books__menu .list {
+  display: flex;
+  height: 100%;
+}
+.books__menu .list li {
+  position: relative;
+  padding: 30px 0;
+}
+.books__menu .list li a {
+  color: #374046;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 30px 25px;
+  text-decoration: none;
+}
+.books__menu .list li a:hover {
+  color: #58bdab;
+}
+.books__menu .list li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0px;
+  height: 7px;
+  background: #58bdab;
+  transition: all 0.45s;
+}
+.books__menu .list li:hover::after {
+  width: 100%;
+}
+.books__carusel {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.books__carusel ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.books__carusel ul .active {
+  background-color: #58bdab;
+}
+.books__carusel ul li {
+  width: 13px;
+  height: 13px;
+  background-color: #333;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  transition: 0.5s;
+}
+.books__carusel ul li:hover {
+  cursor: pointer;
+  background-color: #58bdab;
+}
+.books__cards {
+  position: relative;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  gap: 30px;
+}
+.books__cards a {
+  text-decoration: none;
+}
+
+.card {
+  max-width: 270px;
+}
+.card__photo {
+  padding: 10px 22px;
+  border: 1px solid #e5e5e5;
+}
+.card__photo img {
+  width: 100%;
+}
+.card__name {
+  color: #888888;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+.card__price {
+  color: #374046;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 9px;
+}
+.card__rating {
+  color: #58bdab;
+  font-family: "Material -design";
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin-top: 16px;
+}
+.card:hover {
+  zoom: 110%;
+}/*# sourceMappingURL=style.css.map */
