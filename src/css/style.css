@@ -384,12 +384,16 @@
   margin: 0 auto;
   margin-bottom: 23px;
 }
+.card__cart img {
+  margin-right: 13px;
+}
 .card__other {
   color: #888888;
   height: 17px;
   display: none;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 30px;
 }
 .card__other div:hover {
   color: #58bdab;
@@ -414,4 +418,42 @@
 }
 .card:hover .card__other {
   display: flex;
+}
+
+.deal {
+  min-height: 670px;
+  text-align: center;
+  background: url(../img/shop_bg.jpg) center center;
+  background-color: rgba(255, 255, 255, 0.9);
+  background-size: 100% 100%;
+  margin: 60px 110px 10px 110px;
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.deal__title {
+  font-size: 75px;
+  font-weight: 700;
+  padding-top: 205px;
+}
+.deal__subtitle {
+  font-size: 36px;
+  letter-spacing: 14.4px;
+  margin-top: 40px;
+}
+.deal__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 264px;
+  height: 81px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 38px;
+  font-size: 35px;
 }/*# sourceMappingURL=style.css.map */
