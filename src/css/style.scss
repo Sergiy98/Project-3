@@ -315,7 +315,8 @@
             background-color: #58bdab;
         }
         span {
-            display: none;
+            visibility: hidden;
+            display: flex;
             justify-content: center;
             align-items: center;
             position: absolute;
@@ -331,16 +332,16 @@
             width: 100%;
             img {
                 width: 100%;
-                
             }
         }
         .subphoto {
+            visibility: hidden;
             position: absolute;
             bottom: 10px;
             left: 5px;
             width: 260px;
             height: 100px;
-            display: none;
+            display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
@@ -385,7 +386,8 @@
         margin-bottom: 20px;
     }
     &__cart {   
-        display: none;
+        visibility: hidden;
+        display: flex;
         justify-content: center;
         align-items: center;
         width: 204px;
@@ -403,9 +405,9 @@
         }
     }
     &__other {
+        visibility: hidden;
         color: #888888;
-        height: 17px;
-        display: none;
+        display: flex;
         justify-content: center;
         gap: 30px;
         margin-bottom: 30px;
@@ -418,21 +420,22 @@
     &:hover {
         transition: 0.5s;
         .card {
-
             &__photo {
                 border: none;
             span {
-                display: flex;
+                visibility: visible;
             }
             .subphoto {
-                display: flex;
+                visibility: visible;
             }
             }
             &__cart {
-                display: flex;
+                visibility: visible;
+                transition: 0.5s;
             }
             &__other {
-                display: flex;
+                transition: 2s;
+                visibility: visible;
             }
         }
         z-index: 10;
@@ -442,12 +445,14 @@
 }
 
 .deal {
+    top: -160px;
+    position: relative;
     min-height: 670px;
     text-align: center;
     background: url(../img/shop_bg.jpg) center center;  
     background-color: rgba(255, 255, 255, 0.9);
     background-size: 100% 100%;
-    margin: 60px 110px 10px 110px;
+    margin: 0 110px -150px 110px;
     color: #ffffff;
     font-family: Ubuntu;
     font-weight: 300;
@@ -476,5 +481,109 @@
         margin: 0 auto;
         margin-top: 38px;
         font-size: 35px;
+        cursor: pointer;
     }
+}
+
+.footer {
+    
+    min-height: 1180px;
+    background-color: #2b414e;
+    &__top {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        .logo {
+            width: 76px;
+            height: 65px;
+            margin: 76px auto 28px auto;
+            img {
+                width: 100%;
+            }
+        }
+        .title {
+            color: #58bdab;
+            font-family: Ubuntu;
+            font-size: 45px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .subtitle {
+            color: #ffffff;
+            font-family: Ubuntu;
+            font-size: 12px;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 22px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 56px;
+        }
+    }
+    &__posts {
+                
+        display: flex;
+        gap: 30px;
+        .post {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .img {
+                width: 370px;
+                height: 215px;
+                opacity: 0.9;
+                margin-bottom: 31px;
+            }
+            .title {
+                color: #58bdab;
+                font-family: Ubuntu;
+                font-size: 16px;
+                font-weight: 700;
+                font-style: normal;
+                letter-spacing: normal;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 22px;
+            }
+            .subtitle .date {
+                font-family: Ubuntu;
+                font-size: 12px;
+                font-weight: 300;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 22px;
+                text-align: center;
+                text-transform: uppercase;
+                
+            }
+            .subtitle {
+                color: #ffffff;
+                margin-bottom: 19px;
+                text-align: center;
+            }
+            .date {
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 62px;
+                img {
+                    height: 13px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.line {
+    color: #2b414e;
+    height: 1px;
+    opacity: 0.1;
 }
